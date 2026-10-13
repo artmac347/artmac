@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Palitan mo 'to ng na-copy mong API Key mula sa Resend
-const resend = new Resend("re_6EFN4ZUM_M6H486BPhAZD9ZuWSiAKtqzk");
+const resend = new Resend(process.env.RESEND_API_KEY); // Dito mo ilalagay ang API Key mo mula sa Resend
 
 app.use(cors()); //
 app.use(express.json());
